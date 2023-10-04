@@ -1,0 +1,9 @@
+# ninja log v5
+14	473	1696413951343861238	CMakeFiles/untitled.dir/basic-tutorial-3.c.o	36e7383f96d7bb6
+2	166	1696416170034757631	CMakeFiles/untitled.dir/basic-tutorial-1.c.o	de847ac7bd4686a1
+0	38	1696422143079350606	build.ninja	7966c9ed338b3414
+1	176	1696415756837975997	CMakeFiles/untitled.dir/main.c.o	ca896f3feda53b7d
+3	152	1696416170018757480	CMakeFiles/untitled.dir/v4lsrcornek.c.o	86af258f46e6b8d7
+2	167	1696416170034757631	CMakeFiles/untitled.dir/manuelhelloworld.c.o	6f799ef7bbc6f723
+14	475	1696413951343861238	CMakeFiles/untitled.dir/basic4.c.o	37bd6790dce41620
+1	50	1696416307391846852	untitled	846169b2fe132073
