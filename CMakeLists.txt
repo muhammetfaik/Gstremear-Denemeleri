@@ -10,11 +10,11 @@ pkg_search_module(gstreamer-sdp REQUIRED IMPORTED_TARGET gstreamer-sdp-1.0>=1.4)
 pkg_search_module(gstreamer-app REQUIRED IMPORTED_TARGET gstreamer-app-1.0>=1.4)
 pkg_search_module(gstreamer-video REQUIRED IMPORTED_TARGET gstreamer-video-1.0>=1.4)
 
-add_executable(untitled main.c
-        webcam.c
-        usbcam_encode_mp4.c
-        udpconnectionwebcam.cpp
-        udpconnectionwebcam.h
+
+add_executable(untitled
+        webcamudp.c
+        udpsinkcalisan.c
+        udpsinknew.cpp
 )
 
 

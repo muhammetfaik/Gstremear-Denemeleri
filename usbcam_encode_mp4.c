@@ -1,6 +1,18 @@
-//
-// Created by muhammetfaik on 04.10.2023.
-//
+/*
+* Copyright (c) 2020 Qualcomm Innovation Center, Inc.  All Rights Reserved.
+*
+* SPDX-License-Identifier: BSD-3-Clause-Clear
+*/
+
+/*
+ * usbcam_encode_mp4.c:
+ *
+ * A sample app based on gstreamer
+ * The purpose is helping users to learn how to implement the
+ * mp4 file encoding from USB camera with gstreamer on the
+ * Qualcomm platform through this sample app.
+ */
+
 #include <gst/gst.h>
 #include <glib.h>
 #include <glib-unix.h>
@@ -93,13 +105,15 @@ int main (int argc, char *argv[])
     }
 
     pipeline    = gst_pipeline_new("video-encoder");
-    source      = gst_element_factory_make("v4l2src",      "v4l2-source");
+    source      = gst_element_factory_make("appsrc",      "app-source");
     videoconv   = gst_element_factory_make("videoconvert", "converter");
     framefilter = gst_element_factory_make("capsfilter",   "frame-filter");
     encoder     = gst_element_factory_make("x264enc",      "x264-encoder");
     muxer       = gst_element_factory_make("mp4mux",       "mp4-muxer");
     queue       = gst_element_factory_make("queue",        "queue");
     sink        = gst_element_factory_make("filesink",     "file-output");
+
+
 
     // videoconvert: Convert video frames between a great variety of video formats.
     // we add videoconvert to convert the format from different usb camera input.
