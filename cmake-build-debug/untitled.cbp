@@ -120,10 +120,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/muhammetfaik/Codes/Gstremear-Denemeleri/udpsink.cpp">
+		<Unit filename="/home/muhammetfaik/Codes/Gstremear-Denemeleri/udpsinkcalisan.c">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/home/muhammetfaik/Codes/Gstremear-Denemeleri/udpsinkcalisan.c">
+		<Unit filename="/home/muhammetfaik/Codes/Gstremear-Denemeleri/udpsinknew.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/home/muhammetfaik/Codes/Gstremear-Denemeleri/video_udp_opencv.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/home/muhammetfaik/Codes/Gstremear-Denemeleri/video_udp_opencv_chatgpt.cpp">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/home/muhammetfaik/Codes/Gstremear-Denemeleri/webcamudp.c">

@@ -1,10 +1,8 @@
 //
 // Created by muhammetfaik on 06.10.2023.
 //
-#include <gst/gst.h>
-#include <gstreamer-1.0/gst/gstmessage.h>
-#include <gstreamer-1.0/gst/gstclock.h>
-#include <gstreamer-1.0/gst/gstbus.h>
+#include <gstreamer-1.0/gst/gst.h>
+#include <gstreamer-1.0/gst/gstelement.h>
 
 int main(int argc, char *argv[]) {
     gst_init(&argc, &argv);
@@ -14,7 +12,7 @@ int main(int argc, char *argv[]) {
     gst_element_set_state(pipeline, GST_STATE_PLAYING);
 
     GstBus *bus = gst_element_get_bus(pipeline);
-    GstMessage *msg = gst_bus_timed_pop_filtered(bus, GST_CLOCK_TIME_NONE, GST_MESSAGE_ERROR | GST_MESSAGE_EOS);
+    GstMessage *msg = gst_bus_timed_pop_filtered(bus, GST_CLOCK_TIME_NONE, (GstMessageType)(GST_MESSAGE_ERROR | GST_MESSAGE_EOS));
 
     if (msg != NULL)
         gst_message_unref(msg);

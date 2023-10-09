@@ -15,6 +15,8 @@ add_executable(untitled
         webcamudp.c
         udpsinkcalisan.c
         udpsinknew.cpp
+        video_udp_opencv.cpp
+        video_udp_opencv_chatgpt.cpp
 )
 
 
