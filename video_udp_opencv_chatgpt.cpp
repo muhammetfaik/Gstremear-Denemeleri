@@ -15,6 +15,7 @@ int main() {
     // Create a GStreamer pipeline
     GstElement *pipeline = gst_pipeline_new("opencv_gst_pipeline");
     GstElement *appsrc = gst_element_factory_make("appsrc", "source");
+    GstElement *v4lsrc = gst_element_factory_make("")
     GstElement *x264enc = gst_element_factory_make("x264enc", "video_encoder");
     GstElement *rtph264pay = gst_element_factory_make("rtph264pay", "payloader");
     GstElement *udpsink = gst_element_factory_make("udpsink", "sink");
@@ -25,7 +26,7 @@ int main() {
     }
 
     // Set up GStreamer pipeline
-    g_object_set(G_OBJECT(udpsink), "host", "127.0.0.1", "port", 5000, nullptr);
+    g_object_set(G_OBJECT(udpsink), "host", "192.168.1.27", "port", 5000, nullptr);
 
     // Link the elements together
     gst_bin_add_many(GST_BIN(pipeline), appsrc, x264enc, rtph264pay, udpsink, nullptr);
